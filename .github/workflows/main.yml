@@ -15,6 +15,9 @@ jobs:
             creds: ${{ secrets.AZURE_CREDENTIALS }}
             environment: AzureChinaCloud  
 
+        - name: Set subscription  
+          run: az account set --subscription 'e5af0e4d-aea6-4042-8e0e-12c4c72db5c1'
+
         - name: 'Build and push image'
           uses: azure/docker-login@v1
           with:
