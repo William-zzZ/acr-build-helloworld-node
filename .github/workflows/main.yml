@@ -28,6 +28,9 @@ jobs:
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
 
+        - name: Set subscription  
+          run: az account set --subscription 'e5af0e4d-aea6-4042-8e0e-12c4c72db5c1'
+          
         - name: 'Deploy to Azure Container Instances'
           uses: 'azure/aci-deploy@v1'
           with:
