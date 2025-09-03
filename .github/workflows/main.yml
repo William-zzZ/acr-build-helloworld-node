@@ -37,5 +37,5 @@ jobs:
             registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
             registry-username: ${{ secrets.REGISTRY_USERNAME }}
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-            name: "azure-cli-2025-09-02-05-22-30"
-            location: 'China East 3'
+            name: "sampleapp"
+            location: 'China North 3'
